@@ -1,8 +1,3 @@
--- Business rules used throughout:
--- Money uses Completed orders only, with net revenue = quantity * unit_price
--- * (1 - discount / 100) and cost = quantity * cost_price. Counts include all
--- statuses unless a question says otherwise. Round only final displayed money;
--- rank on unrounded amounts. Dates are based on the data, not today's date.
 
 -- Q1: Retrieve all customer records.
 SELECT *

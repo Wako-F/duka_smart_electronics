@@ -1,15 +1,4 @@
--- Alternative standalone copy of scripts/02_create_tables.sql.
--- Run while connected to retail_analytics. IF NOT EXISTS preserves existing tables/data.
---
--- Constraints:
--- * Primary keys make customer_id and order_id unique and non-null.
--- * orders.customer_id is required and must reference a registered customer.
--- * CHECK constraints limit gender, customer segment, payment method and status;
---   they reject nonpositive quantities, negative prices and discounts outside 0..100.
--- * As in the supplied schema, most descriptive fields remain nullable. CHECK
---   alone does not reject NULL; city and product category have no domain CHECK.
--- * discount defaults to zero when an insert omits it.
--- Indexes support the frequent customer joins and date filtering in this project.
+
 
 CREATE TABLE IF NOT EXISTS customers (
     customer_id        INTEGER      PRIMARY KEY,
